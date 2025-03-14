@@ -1,0 +1,155 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --headingFont: "Kaushan Script", cursive;
+    --textsFont: "Raleway", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+@media all and (max-width: 768px) {
+    body{
+        height: 100svh;
+        width: 100svw;
+        background: #fff;
+    }
+    main{
+        height: 100svh;
+        width: 100svw;
+        overflow-x: scroll;
+        display: flex;
+        background-image: -webkit-radial-gradient(#f7adee, #3434ad, #d1d5fc, #440829);
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    main::-webkit-scrollbar{
+        height: 5px;
+    }
+    main::-webkit-scrollbar-track{
+        border-radius: 50px;
+        background-color: green;
+    }
+    main::-webkit-scrollbar-thumb{
+        border-radius: 20px;
+        background: #eff0fc;
+    }
+    .pages{
+        min-height: 100%;
+        min-width: 100svw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 30px;      
+    }
+    .headingTxt{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+        p{
+            text-align: center;
+            font-family: var(--textsFont);
+        }
+    }
+    h1{
+        font-family: var(--headingFont);
+        font-weight: 400;
+        line-height: 1.5em;
+        font-size: 3em;
+        text-align: center;
+    }
+    #phoneVerificationContainer{
+        height: fit-content;
+        width: 100%;
+        border: 1px solid #727272;
+        background-color: #eff0fc;
+        display: flex;
+        flex-direction: column;
+        font-family: var(--textsFont);
+        padding: 15px;
+        padding-bottom: 40px;
+        border-radius: 20px;
+        row-gap: 30px;
+        .verificationHeading{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h4 p{
+                font-size: 12px;
+            }
+            a img{
+                width: 18px;
+                height: auto;
+            }
+        }
+        .numberForm{
+            font-family: var(--textsFont);
+            display: grid;
+            row-gap: 15px;
+            form{
+                font-size: 12px;
+                font-family: var(--textsFont);
+                display: grid;
+                row-gap: 30px;
+                .phoneInput{
+                    height: 40px;
+                    border-radius: 10px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 8px;
+                    background-color: rgb(243, 243, 243);
+                    column-gap: 5px;
+                    margin-top: 5px;
+                    img{
+                        height: 20px;
+                        width: auto;
+                        display: block;
+                    }
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        padding-left: 5px;
+                        background: none;
+                        border: none;
+                        font-family: var(--textsFont);
+                    }
+                }
+                input:focus{
+                    outline: none;
+                }
+                button{
+                    background-color: #3344e0;
+                    color: #fff;
+                    font-size: medium;
+                    font-weight: 500;
+                    font-family: var(--textsFont);
+                    height: 40px;
+                    border-radius: 20px;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+            .lockNote{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                column-gap: 10px;
+                height: 20px;
+                font-size: 1cap;
+                img{
+                    height: 1.5cap;
+                }
+            }
+        }
+    }
+}
